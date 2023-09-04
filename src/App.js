@@ -7,7 +7,6 @@ import Upcoming from './screens/Upcoming/index'
 import Personaje from './screens/OneMovie/index'
 import Favourites from './screens/Favourites/index'
 import NotFound from './screens/NotFound'
-import Results from './screens/Results/index'
 
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
         <Route path={'/upcoming'} component={Upcoming}/>
         <Route path={'/favourites'} component={Favourites}/>
         <Route path={'/movie/id/:id'} component={Personaje}/>
-        <Route path={'/searchresults'} component={Results}/>
 
         <Route component={NotFound}/>
       </Switch>

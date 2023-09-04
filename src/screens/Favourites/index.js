@@ -42,11 +42,12 @@ class index extends Component {
         <h1 className="letter">FAVOURITES MOVIES</h1>
 
         <section>
-          
+          <main>
             <MoviesContainer
               refreshState={(id) => this.refreshState(id)}
               movies={this.state.favourites}
             />
+            </main>
           
         </section>
       </>

@@ -26,7 +26,13 @@ class MiForm extends Component{
             <>
             <form onSubmit={(evento)=> this.evitarSubmit(evento)}>
                 <input onChange={(evento)=> this.guardarValor(evento)} value={this.state.valorInput}/>
-                <button>Search movies</button>
+                {
+                    this.props.seccion === 'upcoming' ?
+                    <button>Search upcoming movies</button>
+                    :
+                    <button>Search popular movies</button>
+                }
+                
             </form>
             </>
         )

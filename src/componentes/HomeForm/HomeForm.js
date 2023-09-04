@@ -4,13 +4,17 @@ class MiForm extends Component{
     constructor(props){
         super(props)
         this.state = {
-            valorInput: ''
+            valorInput: '',
+            movieData:[],
+            backup:[]
         }
     }
+
 
     evitarSubmit(evento){
         evento.preventDefault()
     }
+    
 
     guardarValor(evento){
         this.setState(
@@ -21,12 +25,14 @@ class MiForm extends Component{
         )
     }
 
+    
+
     render(){
         return(
             <>
             <form onSubmit={(evento)=> this.evitarSubmit(evento)}>
                 <input onChange={(evento)=> this.guardarValor(evento)} value={this.state.valorInput}/>
-                <button>Search movies</button>
+                <button>Search all movies</button>
             </form>
             </>
         )

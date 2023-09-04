@@ -46,9 +46,9 @@ class index extends Component {
       <>
       <main>
         <h1 className='letter'>POPULAR MOVIES</h1>
-        <MiForm filterMovies={(name) => this.filterMovies(name)} />
+        <MiForm seccion='popular' filterMovies={(name) => this.filterMovies(name)} />
         <main>
-          <MoviesContainer  movies={this.state.movieData}/>
+          <MoviesContainer   movies={this.state.movieData}/>
         </main>
         <button onClick={() => this.showMoreMovies()}>More movies</button>
       </main>
