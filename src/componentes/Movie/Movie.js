@@ -15,6 +15,7 @@ class Personaje extends Component{
         <article className='character-card'>
         <Link to={`/movie/id/${this.props.id}`}><img src= { 'https://image.tmdb.org/t/p/w500/'+this.props.imagen} alt={this.props.nombre} className='image'/></Link>
         <h3 className='letter'>{this.props.nombre}</h3> 
+        <button onClick={() => this.addToFav(this.state.movieData.id)}>ADD TO FAV</button>
         </article>
     )
   }

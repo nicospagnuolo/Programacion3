@@ -25,10 +25,11 @@ class index extends Component {
     
   }
   showMoreMovies() {
-    fetch(`https://api.themoviedb.org/3/movie/upcoming?page=${this.state.page + 1}`, options)
+    fetch(`https://api.themoviedb.org/3/movie/popular?page=${this.state.page + 1}`, options)
     .then(resp => resp.json())
     .then(data => this.setState({
         movieData: this.state.movieData.concat(data.results),
+        backup: this.state.backup.concat(data.results),
         page: this.state.page + 1
     }))
     .catch(err => console.log(err))

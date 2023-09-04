@@ -2,7 +2,7 @@ import './styles.css'
 import React, { Component } from 'react'
 import { options } from '../../utils/constants'
 import MoviesContainer from '../../componentes/MoviesContainer/MoviesContainer'
-import MiForm from '../../componentes/MiForm/MiForm'
+import HomeForm from '../../componentes/HomeForm/HomeForm'
 
 class index extends Component {
   constructor(props){
@@ -10,47 +10,41 @@ class index extends Component {
     this.state={
         movieData:[],
         backup:[],
-        page: 1
+        page: 1,
+        upcomingData:[],
+        upcomingBackup:[]
     }
   }
   componentDidMount() {
     fetch('https://api.themoviedb.org/3/movie/popular', options)
     .then(resp => resp.json())
     .then(data => this.setState({
-      movieData: data.results,
-      backup: data.results
+      movieData: data.results.slice(0,5),
+      backup: data.results.slice(0,5)
     }))
     .catch(err => console.log(err))
-  }
-  
-  showMoreMovies() {
-    fetch(`https://api.themoviedb.org/3/movie/popular?page=${this.state.page + 1}`, options)
+
+    fetch('https://api.themoviedb.org/3/movie/upcoming', options)
     .then(resp => resp.json())
     .then(data => this.setState({
-        movieData: this.state.movieData.concat(data.results),
-        backup: this.state.backup.concat(data.results),
-        page: this.state.page + 1
+      upcomingData: data.results.slice(0,5),
+      upcomingBackup: data.results
     }))
     .catch(err => console.log(err))
   }
 
-  filterMovies(nombre){
-    let moviesF = this.state.backup.filter((elm) => elm.title.toLowerCase().includes(nombre.toLowerCase()))
-    this.setState({
-      movieData: moviesF,
-    })
-  }
+
 
   render() {
     return (
       <>
       <main>
-        <h1 className='letter'>POPULAR MOVIES</h1>
-        <MiForm filterMovies={(name) => this.filterMovies(name)} />
+        <h1 className='letter'>TOP 5 POPULAR MOVIES</h1>
         <main>
           <MoviesContainer  movies={this.state.movieData}/>
         </main>
-        <button onClick={() => this.showMoreMovies()}>More movies</button>
+        <h1 className='letter'>TOP 5 UPCOMING MOVIES</h1>
+      <MoviesContainer  movies={this.state.upcomingData}/>
       </main>
       </>
     )
