@@ -20,7 +20,6 @@ class index extends Component {
             this.storageMovies ?
             <h1 className='letter'>You don't have favourites movies</h1>
             :
-            
               this.props.movies.length === 0 ?
               <Spinner/>
             :

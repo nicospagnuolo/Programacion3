@@ -24,8 +24,10 @@ class index extends Component {
   render() {
     return (
       <>
+      <main>
       <HomeForm filterMovies={(name) => this.filterMovies(name)} />
       <FiveMovies/>
+      </main>
       </>
     )
   }
