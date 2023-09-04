@@ -1,0 +1,36 @@
+/* footer */
+footer {
+    background-color:rgb(33, 33, 33);
+    text-align: center;
+    padding: 40px 0;
+    bottom: 0;
+    width: 100%;
+}
+.abajohijos {
+    list-style-type: none;
+    line-height: 60px;
+}
+.letter {
+    color: white;
+    text-decoration: none;
+}
+.logomp{
+    height: 100px;
+    width: 850px;
+    margin-left: 30px;
+    border-radius: 50px;
+}
+
+.integrantes {
+    display: flex;
+    background: black;
+    height: 70px;
+    width: 1000px;
+    border-start-start-radius: 58px;
+    border-start-end-radius: 58px;
+    justify-content: center;
+    margin: auto;
+    border-bottom-left-radius: 58px;
+    border-bottom-right-radius: 58px;
+    margin-block-end: 20px;
+}
