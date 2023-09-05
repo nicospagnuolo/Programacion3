@@ -24,9 +24,11 @@ class index extends Component {
               <Spinner/>
             :
               this.props.movies.map((movie)=> <Movie 
-              refresState={this.props.refresState ? (id) => this.props.refresState(id) : false} 
-              id={movie.id} nombre={movie.title} 
-              imagen={movie.poster_path} description={movie.overview}
+              refreshState={this.props.refreshState ? (id) => this.props.refreshState(id) : false} 
+              id={movie.id}
+              nombre={movie.title} 
+              imagen={movie.poster_path} 
+              description={movie.overview}
               />)
             
           }

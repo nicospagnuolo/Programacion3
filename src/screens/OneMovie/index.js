@@ -18,7 +18,7 @@ export default class index extends Component {
       .then( data => this.setState({
         movieData: data
       }, () => {
-        console.log(this.state.movieData)
+        
       let favStorage = localStorage.getItem('favourites')
       let arrParseado = JSON.parse(favStorage)
 
