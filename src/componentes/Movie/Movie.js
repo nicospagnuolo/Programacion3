@@ -91,7 +91,14 @@ class Personaje extends Component{
           this.cambiar()
           : this.volver()}>{this.state.texto}
           </button>
-          <p className='letter'>{this.state.description}</p>
+          {
+            this.state.texto !== 'Show more'?
+            <p className='letter'>{this.state.description}</p>
+            :
+            <br>
+            </br>
+          }
+       
         </article>
     )
   }
