@@ -1,3 +1,4 @@
+import './styles.css'
 import React, { Component } from 'react'
 import Movie from '../Movie/Movie'
 import Spinner from '../Spinner/Spinner'
