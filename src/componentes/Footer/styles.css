@@ -35,6 +35,13 @@ footer {
     margin-block-end: 20px;
 }
 
+@media (max-width:390px){
+    footer{
+        width: 190vh;
+    }
+    
+}    
+
 
 
 

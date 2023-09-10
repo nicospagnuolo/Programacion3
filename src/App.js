@@ -5,7 +5,7 @@ import Footer from "./componentes/Footer/Footer"
 import Home from './screens/Home'
 import Popular from './screens/Popular/index'
 import Upcoming from './screens/Upcoming/index'
-import Personaje from './screens/OneMovie/index'
+import Movie from './screens/OneMovie/index'
 import Favourites from './screens/Favourites/index'
 import NotFound from './screens/NotFound'
 
@@ -13,6 +13,7 @@ import NotFound from './screens/NotFound'
 function App() {
   return(
     <>
+    <meta name="viewport" content="widht=device-width, initial-scale=1"/>
     <section>
       <Navbar/>
       <Switch>
@@ -20,8 +21,7 @@ function App() {
         <Route path={'/popular'} component={Popular}/>
         <Route path={'/upcoming'} component={Upcoming}/>
         <Route path={'/favourites'} component={Favourites}/>
-        <Route path={'/movie/id/:id'} component={Personaje}/>
-
+        <Route path={'/movie/id/:id'} component={Movie}/>
         <Route component={NotFound}/>
       </Switch>
       <Footer />

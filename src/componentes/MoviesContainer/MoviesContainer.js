@@ -18,20 +18,16 @@ class index extends Component {
       <div >
         <section>
           {
-            this.storageMovies ?
-            <h1 className='letter'>You don't have favourites movies</h1>
-            :
-              this.props.movies.length === 0 ?
-              <Spinner/>
-            :
-              this.props.movies.map((movie)=> <Movie 
-              refreshState={this.props.refreshState ? (id) => this.props.refreshState(id) : false} 
-              id={movie.id}
-              nombre={movie.title} 
-              imagen={movie.poster_path} 
-              description={movie.overview}
-              />)
-            
+          this.props.movies.length === 0 ?
+          <Spinner/>
+          :
+          this.props.movies.map((movie)=> <Movie 
+          refreshState={this.props.refreshState ? (id) => this.props.refreshState(id) : false} 
+          id={movie.id}
+          nombre={movie.title} 
+          imagen={movie.poster_path} 
+          description={movie.overview}
+          />)
           }
         
         </section>

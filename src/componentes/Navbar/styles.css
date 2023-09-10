@@ -67,3 +67,10 @@ h1,
 main {
     padding: 0 30px;
 }
+
+@media (max-width:390px){
+    div{
+        width: 190vh;
+    }
+    
+}   

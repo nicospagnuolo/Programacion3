@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Movie from '../Movie/Movie'
 
 class index extends Component {
   constructor(props){
@@ -13,7 +12,7 @@ class index extends Component {
     console.log('props del container', this.props.movies)
     return (
             <div className='container'>
-              <div id='load'><h1 className='letter'>Bringing movies...</h1></div>
+              <div id='load'><h1 className='letter'>Bringing movies</h1></div>
           </div> 
         
     )

@@ -74,7 +74,7 @@ export default class index extends Component {
       {
         this.state.movieData === null ?
         <div className='container'>
-              <div id='load'><h1 className='letter'>Bringing movies...</h1></div>
+              <div id='load'><h1 className='letter'>Bringing movies</h1></div>
           </div>
         :
            <section>
@@ -99,8 +99,6 @@ export default class index extends Component {
                 :
                 <button onClick={() => this.addToFav(this.state.movieData.id)}>ADD TO FAV</button>
               }
-                
-                
               </article>
           </section>
           

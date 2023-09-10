@@ -48,7 +48,6 @@ class index extends Component {
       <main>
       <MiForm seccion='upcoming' filterMovies={(name) => this.filterMovies(name)} />
         <h1 className='letter'>UPCOMING MOVIES</h1>
-        
         <main>
           <MoviesContainer  movies={this.state.movieData}/>
         </main>

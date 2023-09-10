@@ -62,3 +62,10 @@ box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
     display: none;
 }
 
+@media (max-width:390px){
+    .character-card{
+        width: 80vh;
+    }
+    
+    
+}    

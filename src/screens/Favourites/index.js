@@ -40,16 +40,19 @@ class index extends Component {
     return (
       <>
         <h1 className="letter">FAVOURITES MOVIES</h1>
-
-        <section>
+        {
+          localStorage.getItem('favourites').length === 0 ?
+          <h1 className="letter">You don't have favourites movies yet.</h1>
+          :
+          <section>
           <main>
             <MoviesContainer
               refreshState={(id) => this.refreshState(id)}
-              movies={this.state.favourites}
+              movies={this.state.favourites} 
             />
             </main>
-          
         </section>
+        }
       </>
     );
   }
