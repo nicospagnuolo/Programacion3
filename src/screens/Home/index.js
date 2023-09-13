@@ -36,16 +36,13 @@ class index extends Component {
   render() {
     return (
       <>
-      <main>
       <HomeForm  filterMovies={(input) => this.filterMovies(input)} />
         {
           this.state.searchData.length === 0 ?
-          <main><FiveMovies/></main>
+          <FiveMovies/>
           :
-          <main><MoviesContainer  movies={this.state.searchData}/></main>
+          <MoviesContainer  movies={this.state.searchData}/>
         }
-        <main/>
-      </main>
       </>
     )
   }

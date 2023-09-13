@@ -8,6 +8,7 @@ class index extends Component {
     super(props);
     this.state = {
       favourites: [],
+      haveFav: false
     };
   }
   componentDidMount() {
@@ -21,10 +22,16 @@ class index extends Component {
           )
         )
       )
-        .then((data) =>
-          this.setState({ favourites: data }, () =>
-            console.log("el state es:", this.state.favourites)
+        .then((data) =>{
+          data.length > 0 ?
+          this.setState({ favourites: data,
+            haveFav: true
+           }
           )
+          :
+          this.setState({ haveFav: false }
+          )
+          }
         )
         .catch((err) => console.log(err));
     }
@@ -32,27 +39,32 @@ class index extends Component {
 
   refreshState(id) {
     let refState = this.state.favourites.filter((elm) => elm.id !== id);
+    if(refState.length === 0) {
+      <h1 className="letter">You don't have favourites movies yet.</h1>
+      this.setState({
+        haveFav: false
+      })
+    }
     this.setState({
-      favourites: refState,
+      favourites: refState
     });
   }
   render() {
     return (
       <>
         <h1 className="letter">FAVOURITES MOVIES</h1>
-        {
-          localStorage.getItem('favourites').length === 0 ?
-          <h1 className="letter">You don't have favourites movies yet.</h1>
-          :
           <section>
           <main>
-            <MoviesContainer
-              refreshState={(id) => this.refreshState(id)}
-              movies={this.state.favourites} 
-            />
+            {
+              this.state.haveFav ?
+              <MoviesContainer
+                refreshState={(id) => this.refreshState(id)}
+                movies={this.state.favourites}
+              /> :
+              <h1 className="letter">You don't have favourites movies yet.</h1>
+            }
             </main>
         </section>
-        }
       </>
     );
   }

@@ -17,7 +17,7 @@ export default class index extends Component {
       .then(res => res.json())
       .then( data => this.setState({
         movieData: data
-      }, () => {
+      }, console.log(data),() => {
         
       let favStorage = localStorage.getItem('favourites')
       let arrParseado = JSON.parse(favStorage)
@@ -32,10 +32,6 @@ export default class index extends Component {
       }
       }))
       .catch(err => console.log(err))
-
-
-      
-      
   }
 
   addToFav(movieId){
@@ -67,10 +63,10 @@ export default class index extends Component {
     })
   }
 
-
   render() {
     return (
       <>
+      
       {
         this.state.movieData === null ?
         <div className='container'>
@@ -88,8 +84,8 @@ export default class index extends Component {
               <p className="letter" id="data">RELEASE DATE:  { this.state.movieData.release_date}</p>
               <p className="letter" id="data">GENRES: </p>
               <ul  className="ul" >{
-              // this.state.movieData.genres.map(
-              //   (elm) => <li className="itemlista">{elm.name}</li>)
+              this.state.movieData.genres.map(
+                (elm) => <li className="itemlista">{elm.name}</li>)
                 }</ul>
               <p className="letter" id="data">RUNTIME: {this.state.movieData.runtime} minutes</p>
               <p className="letter" id="data">OVERVIEW: {this.state.movieData.overview}</p>

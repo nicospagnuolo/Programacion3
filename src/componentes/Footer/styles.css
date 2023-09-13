@@ -4,7 +4,6 @@ footer {
     text-align: center;
     padding: 40px 0;
     bottom: 0;
-    width: 100%;
 }
 .abajohijos {
     list-style-type: none;
@@ -16,16 +15,12 @@ footer {
 }
 .logomp{
     height: 100px;
-    width: 850px;
-    margin-left: 30px;
     border-radius: 50px;
 }
 
 .integrantes {
     display: flex;
     background: black;
-    height: 70px;
-    width: 1000px;
     border-start-start-radius: 58px;
     border-start-end-radius: 58px;
     justify-content: center;
@@ -36,10 +31,16 @@ footer {
 }
 
 @media (max-width:390px){
-    footer{
-        width: 190vh;
+    .integrantes{
+        width: initial;
     }
-    
+    .footer{
+        width: initial;
+    }
+
+    .logomp{
+        width: 80vh
+    }
 }    
 
 

@@ -1,4 +1,3 @@
-import './styles.css'
 import {Switch, Route} from 'react-router-dom'
 import Navbar from "./componentes/Navbar/Navbar"
 import Footer from "./componentes/Footer/Footer"
@@ -13,8 +12,6 @@ import NotFound from './screens/NotFound'
 function App() {
   return(
     <>
-    <meta name="viewport" content="widht=device-width, initial-scale=1"/>
-    <section>
       <Navbar/>
       <Switch>
         <Route path={'/'} exact={true} component={Home} />
@@ -25,7 +22,7 @@ function App() {
         <Route component={NotFound}/>
       </Switch>
       <Footer />
-      </section>
+      
     </>
   )
 }

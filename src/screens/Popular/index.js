@@ -1,4 +1,3 @@
-import './styles.css'
 import React, { Component } from 'react'
 import { options } from '../../utils/constants'
 import MoviesContainer from '../../componentes/MoviesContainer/MoviesContainer'

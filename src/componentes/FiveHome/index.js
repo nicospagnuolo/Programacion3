@@ -2,7 +2,6 @@ import './styles.css'
 import React, { Component } from 'react'
 import { options } from '../../utils/constants'
 import MoviesContainer from '../../componentes/MoviesContainer/MoviesContainer'
-import HomeForm from '../../componentes/HomeForm/HomeForm'
 
 class index extends Component {
   constructor(props){
@@ -38,14 +37,10 @@ class index extends Component {
   render() {
     return (
       <>
-      <main>
         <h1 className='letter'>TOP 5 POPULAR MOVIES</h1>
-        <main>
           <MoviesContainer  movies={this.state.movieData}/>
-        </main>
         <h1 className='letter'>TOP 5 UPCOMING MOVIES</h1>
       <MoviesContainer  movies={this.state.upcomingData}/>
-      </main>
       </>
     )
   }

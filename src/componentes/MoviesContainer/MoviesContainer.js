@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Movie from '../Movie/Movie'
 import Spinner from '../Spinner/Spinner'
 
+
 class index extends Component {
   constructor(props){
     super(props)
@@ -15,8 +16,8 @@ class index extends Component {
   render(){
     console.log('props del container', this.props.movies)
     return (
-      <div >
-        <section>
+      <>
+        <section className='section'>
           {
           this.props.movies.length === 0 ?
           <Spinner/>
@@ -29,9 +30,8 @@ class index extends Component {
           description={movie.overview}
           />)
           }
-        
         </section>
-      </ div>
+      </>
     )
   }
 }
