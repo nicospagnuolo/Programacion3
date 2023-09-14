@@ -44,14 +44,11 @@ class index extends Component {
   render() {
     return (
       <>
-      <main>
       <MiForm seccion='upcoming' filterMovies={(name) => this.filterMovies(name)} />
         <h1 className='letter'>UPCOMING MOVIES</h1>
-        <main>
-          <MoviesContainer  movies={this.state.movieData}/>
-        </main>
+        <MoviesContainer  movies={this.state.movieData}/>
         <button onClick={() => this.showMoreMovies()}>More movies</button>
-      </main>
+      
       </>
     )
   }

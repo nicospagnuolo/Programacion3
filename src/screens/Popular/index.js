@@ -1,3 +1,4 @@
+import './styles.css'
 import React, { Component } from 'react'
 import { options } from '../../utils/constants'
 import MoviesContainer from '../../componentes/MoviesContainer/MoviesContainer'
@@ -43,14 +44,10 @@ class index extends Component {
   render() {
     return (
       <>
-      <main>
         <MiForm seccion='popular' filterMovies={(name) => this.filterMovies(name)} />
         <h1 className='letter'>POPULAR MOVIES</h1>
-        <main>
-          <MoviesContainer   movies={this.state.movieData}/>
-        </main>
-        <button onClick={() => this.showMoreMovies()}>More movies</button>
-      </main>
+        <MoviesContainer   movies={this.state.movieData}/>
+        <button onClick={() => this.showMoreMovies()} >More movies</button>
       </>
     )
   }
