@@ -27,7 +27,7 @@ function App() {
       <ul className='arriba'>
         <li > 
           <Link to ={navegacion[0].ruta} >
-            <img src="./img/udesaplaylogo.png" alt="" className="logo" />
+            <img src="./img/logo.png" alt="" className="logo" />
           </Link>
         </li>
               {

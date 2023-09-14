@@ -7,7 +7,7 @@ function App() {
         <ul className="integrantes">
             <li className="abajohijos"><a className="letter" href=""> Jeronimo Caldelas --- Eros Corrado --- Nicolas Spagnuolo </a></li>
         </ul>
-        <img className="logomp" src="./img/logoTM.png"/>
+        <img className="logomp" src="./img/logo.png"/>
     </footer>
     </>
   );

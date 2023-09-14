@@ -14,8 +14,9 @@ footer {
     text-decoration: none;
 }
 .logomp{
-    width: 100%;
-    border-radius: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
 }
 
 .integrantes {
@@ -37,7 +38,6 @@ footer {
     .footer{
         width: initial;
     }
-
 }    
 
 
