@@ -9,11 +9,6 @@ class index extends Component {
   constructor(props){
     super(props)
     this.state={
-        movieData:[],
-        backup:[],
-        page: 1,
-        upcomingData:[],
-        upcomingBackup:[],
         searchData:[]
     }
   }
@@ -21,8 +16,6 @@ class index extends Component {
   componentDidMount() {
     
   }
-
-  
 
   filterMovies(input){
     fetch(`https://api.themoviedb.org/3/search/movie?query=${input}&include_adult=false&language=en-US&page=1`, options)
