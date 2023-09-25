@@ -25,6 +25,7 @@ class index extends Component {
           this.props.movies.map((movie)=> <Movie 
           refreshState={this.props.refreshState ? (id) => this.props.refreshState(id) : false} 
           id={movie.id}
+          key={movie.title + movie.id}
           nombre={movie.title} 
           imagen={movie.poster_path} 
           description={movie.overview}
