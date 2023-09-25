@@ -1,5 +1,6 @@
 import './styles.css'
 import React, { Component } from 'react'
+import Spinner from "../../componentes/Spinner/Spinner"
 import { options } from '../../utils/constants'
 import { Link } from "react-router-dom"
 
@@ -68,9 +69,7 @@ export default class index extends Component {
       <>
       {
         this.state.movieData === null ?
-        <div className='container'>
-              <div id='load'><h1 className='letter'>Bringing movies</h1></div>
-          </div>
+        <Spinner/>
         :
            <section>
             <article className='character-card'>
