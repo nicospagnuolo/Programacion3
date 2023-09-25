@@ -5,8 +5,6 @@ class MiForm extends Component{
         super(props)
         this.state = {
             valorInput: '',
-            movieData:[],
-            backup:[]
         }
     }
 
